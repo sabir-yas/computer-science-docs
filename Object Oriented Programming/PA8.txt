@@ -1,0 +1,639 @@
+CollegePerson.cpp
+#include "CollegePerson.h"
+
+/*********************************************************
+ * Default constructor initializing all fields to default
+ * values, providing a base state for a CollegePerson instance.
+ *********************************************************/
+CollegePerson::CollegePerson() : id(0), earned(0.0), total(0.0), grade(0.0), gpa(0.0) {}
+
+/*********************************************************
+ * Parameterized constructor for initializing CollegePerson
+ * with specific name, age, university, college, and ID.
+ *********************************************************/
+CollegePerson::CollegePerson(std::string name, int age, std::string university, std::string college, int id)
+    : Person(name, age), university(university), college(college), id(id), earned(0.0), total(0.0), grade(0.0), gpa(0.0) {}
+
+/*********************************************************
+ * Sets the university name.
+ *********************************************************/
+void CollegePerson::setUniv(std::string university) {
+    this->university = university;
+}
+
+/*********************************************************
+ * Returns the university name.
+ *********************************************************/
+std::string CollegePerson::getUniv() {
+    return this->university;
+}
+
+/*********************************************************
+ * Sets the college name.
+ *********************************************************/
+void CollegePerson::setCollege(std::string college) {
+    this->college = college;
+}
+
+/*********************************************************
+ * Returns the college name.
+ *********************************************************/
+std::string CollegePerson::getCollege() {
+    return this->college;
+}
+
+/*********************************************************
+ * Sets the student's ID.
+ *********************************************************/
+void CollegePerson::setID(int id) {
+    this->id = id;
+}
+
+/*********************************************************
+ * Returns the student's ID.
+ *********************************************************/
+int CollegePerson::getID() {
+    return this->id;
+}
+
+/*********************************************************
+ * Sets the earned score for the student.
+ *********************************************************/
+void CollegePerson::setEarned(float earned) {
+    this->earned = earned;
+}
+
+/*********************************************************
+ * Returns the earned score.
+ *********************************************************/
+float CollegePerson::getEarned() {
+    return this->earned;
+}
+
+/*********************************************************
+ * Sets the total score.
+ *********************************************************/
+void CollegePerson::setTotal(float total) {
+    this->total = total;
+}
+
+/*********************************************************
+ * Returns the total score.
+ *********************************************************/
+float CollegePerson::getTotal() {
+    return this->total;
+}
+
+/*********************************************************
+ * Sets the grade as a percentage.
+ *********************************************************/
+void CollegePerson::setGrade(float grade) {
+    this->grade = grade;
+}
+
+/*********************************************************
+ * Returns the grade as a percentage.
+ *********************************************************/
+float CollegePerson::getGrade() {
+    return this->grade;
+}
+
+/*********************************************************
+ * Sets the Grade Point Average (GPA).
+ *********************************************************/
+void CollegePerson::setgpa(float gpa) {
+    this->gpa = gpa;
+}
+
+/*********************************************************
+ * Returns the Grade Point Average (GPA).
+ *********************************************************/
+float CollegePerson::getgpa() {
+    return this->gpa;
+}
+
+/*********************************************************
+ * Sets the letter grade.
+ *********************************************************/
+void CollegePerson::setLetterGrade(std::string letterGrade) {
+    this->letterGrade = letterGrade;
+}
+
+/*********************************************************
+ * Returns the letter grade.
+ *********************************************************/
+std::string CollegePerson::getLetterGrade() {
+    return this->letterGrade;
+}
+
+CollegePerson.h
+/*********************************************************
+ * Summary:
+ *    This header file defines the `CollegePerson` class,
+ *    which inherits from `Person` and represents a student
+ *    with additional attributes for university, college, ID,
+ *    academic scores, and grades. The class includes methods
+ *    to set and retrieve each attribute.
+ *
+ * Methods:
+ *    CollegePerson() - Default constructor, initializes empty values.
+ *    CollegePerson(std::string, int, std::string, std::string, int)
+ *       - Parameterized constructor for full initialization.
+ *    Setters and Getters - Methods for managing each attribute.
+ *
+ *********************************************************/
+
+#ifndef COLLEGEPERSON_H
+#define COLLEGEPERSON_H
+#include <string>
+#include "Person.h"
+
+class CollegePerson : public Person
+{
+private:
+    std::string university;  // University name
+    std::string college;     // College name
+    int id;                  // Student ID
+    float earned;            // Earned score
+    float total;             // Total score
+    float grade;             // Grade as a percentage
+    float gpa;               // Grade Point Average
+    std::string letterGrade; // Letter grade
+
+public:
+    // Constructors
+    CollegePerson();                                                // Default constructor
+    CollegePerson(std::string, int, std::string, std::string, int); // Parameterized constructor
+
+    // Setters and Getters
+    void setUniv(std::string); // Sets university
+    std::string getUniv();     // Gets university
+
+    void setCollege(std::string); // Sets college
+    std::string getCollege();     // Gets college
+
+    void setID(int); // Sets ID
+    int getID();     // Gets ID
+
+    void setEarned(float); // Sets earned score
+    float getEarned();     // Gets earned score
+
+    void setTotal(float); // Sets total score
+    float getTotal();     // Gets total score
+
+    void setGrade(float); // Sets grade as percentage
+    float getGrade();     // Gets grade
+
+    void setgpa(float); // Sets GPA
+    float getgpa();     // Gets GPA
+
+    void setLetterGrade(std::string); // Sets letter grade
+    std::string getLetterGrade();     // Gets letter grade
+};
+
+#endif
+
+functions.h
+/*********************************************************
+ * Summary:
+ *    This header file defines utility functions for managing
+ *    a collection of CollegePerson objects, handling input,
+ *    grade calculation, and formatted display. The functions
+ *    are used to populate data, compute grades, and output
+ *    records grouped by university.
+ *
+ * Functions:
+ *    void greeting() - Displays a simple greeting message.
+ *    int recordCount() - Returns the count of records in the data file.
+ *    void getInput(std::vector<CollegePerson *>) - Populates vector
+ *       with CollegePerson data from file.
+ *    void calcGrades(std::vector<CollegePerson *>) - Calculates
+ *       grades for each CollegePerson based on scores.
+ *    void display(std::vector<CollegePerson *>) - Displays records
+ *       grouped by university name.
+ *
+ *********************************************************/
+
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+#include <vector>
+#include "CollegePerson.h"
+
+// Displays a greeting message
+void greeting();
+
+// Counts and returns the number of records in the data file
+int recordCount();
+
+// Reads input data from a file and populates the provided vector
+void getInput(std::vector<CollegePerson *>);
+
+// Calculates grades and GPAs for each CollegePerson in the vector
+void calcGrades(std::vector<CollegePerson *>);
+
+// Displays all CollegePerson records, grouped by university
+void display(std::vector<CollegePerson *>);
+
+#endif
+
+functions.cpp
+#include "functions.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <iomanip>
+
+/*********************************************************
+ * Displays a greeting message to the user.
+ *********************************************************/
+void greeting()
+{
+    std::cout << "Press Enter to Continue";
+}
+
+/*********************************************************
+ * Reads through the data file to count the number of
+ * CollegePerson records, where each record is separated
+ * by a blank line.
+ *
+ * Returns:
+ *    int - The total number of records in the file.
+ *********************************************************/
+int recordCount()
+{
+    std::ifstream file("data/data.txt");
+    int count = 0;
+
+    if (!file.is_open())
+    {
+        std::cerr << "Cannot open file" << std::endl;
+        return 0;
+    }
+
+    std::string line;
+    bool inRecord = false;
+
+    // Count records, assuming each is separated by a blank line
+    while (std::getline(file, line))
+    {
+        if (line.empty())
+        {
+            if (inRecord)
+            {
+                count++;
+                inRecord = false;
+            }
+        }
+        else
+        {
+            inRecord = true;
+        }
+    }
+
+    if (inRecord)
+    {
+        count++;
+    }
+
+    file.close();
+    return count;
+}
+
+/*********************************************************
+ * Reads CollegePerson data from a file and populates the
+ * provided vector. Each record begins with personal details
+ * followed by individual scores.
+ *
+ * Parameters:
+ *    vec - A vector of CollegePerson pointers to be populated.
+ *********************************************************/
+void getInput(std::vector<CollegePerson *> vec)
+{
+    std::ifstream file("data/data.txt");
+    if (!file.is_open())
+    {
+        std::cerr << "Error opening file." << std::endl;
+        return;
+    }
+
+    std::string line;
+    int index = 0;
+
+    // Loop through file to read each record
+    while (std::getline(file, line))
+    {
+        if (line.empty()) // Skip blank lines
+            continue;
+
+        std::stringstream ss(line);
+        std::string name, university, college;
+        int age, id;
+        std::string temp;
+
+        // Parse personal information
+        std::getline(ss, name, ',');
+        std::getline(ss, temp, ',');
+        age = std::stoi(temp);
+        std::getline(ss, university, ',');
+        std::getline(ss, college, ',');
+        std::getline(ss, temp);
+        id = std::stoi(temp);
+
+        // Set values in the CollegePerson object at current index
+        vec[index]->setName(name);
+        vec[index]->setAge(age);
+        vec[index]->setUniv(university);
+        vec[index]->setCollege(college);
+        vec[index]->setID(id);
+
+        // Parse scores within the record
+        float totalEarned = 0, totalPoints = 0;
+        while (std::getline(file, line) && !line.empty())
+        {
+            std::istringstream iss(line);
+            std::string task;
+            float earned = 0, total = 0;
+
+            std::getline(iss, task, ',');
+            std::getline(iss, temp, '/');
+            earned = std::stof(temp);
+            std::getline(iss, temp);
+            total = std::stof(temp);
+
+            totalEarned += earned;
+            totalPoints += total;
+        }
+        vec[index]->setEarned(totalEarned);
+        vec[index]->setTotal(totalPoints);
+
+        index++;
+    }
+}
+
+/*********************************************************
+ * Calculates the grade as a percentage and assigns letter
+ * grades and GPA based on score thresholds.
+ *
+ * Parameters:
+ *    vec - A vector of CollegePerson pointers with scores set.
+ *********************************************************/
+void calcGrades(std::vector<CollegePerson *> vec)
+{
+    float grade = 0.0;
+    for (int i = 0; i < recordCount(); i++)
+    {
+        grade = (vec[i]->getEarned() / vec[i]->getTotal()) * 100;
+        vec[i]->setGrade(grade);
+
+        // Assign letter grade and GPA based on calculated grade
+        if (grade > 94 && grade <= 100)
+        {
+            vec[i]->setLetterGrade("A+");
+            vec[i]->setgpa(4.5);
+        }
+        else if (grade > 89 && grade <= 94)
+        {
+            vec[i]->setLetterGrade("A");
+            vec[i]->setgpa(4.0);
+        }
+        else if (grade > 84 && grade <= 89)
+        {
+            vec[i]->setLetterGrade("B+");
+            vec[i]->setgpa(3.5);
+        }
+        else if (grade > 79 && grade <= 84)
+        {
+            vec[i]->setLetterGrade("B");
+            vec[i]->setgpa(3.0);
+        }
+        else if (grade > 74 && grade <= 79)
+        {
+            vec[i]->setLetterGrade("C+");
+            vec[i]->setgpa(2.5);
+        }
+        else if (grade > 69 && grade <= 74)
+        {
+            vec[i]->setLetterGrade("C");
+            vec[i]->setgpa(2.0);
+        }
+        else if (grade > 64 && grade <= 69)
+        {
+            vec[i]->setLetterGrade("D+");
+            vec[i]->setgpa(1.5);
+        }
+        else if (grade > 60 && grade <= 64)
+        {
+            vec[i]->setLetterGrade("D");
+            vec[i]->setgpa(1.0);
+        }
+        else
+        {
+            vec[i]->setLetterGrade("F");
+            vec[i]->setgpa(0);
+        }
+    }
+}
+
+/*********************************************************
+ * Displays CollegePerson records, grouped by university.
+ * Prints formatted output for each person under the
+ * appropriate university heading.
+ *
+ * Parameters:
+ *    vec - A vector of CollegePerson pointers with populated
+ *          information to display.
+ *********************************************************/
+void display(std::vector<CollegePerson *> vec)
+{
+    std::cout << std::left << "UCD" << std::endl;
+    std::cout << std::left << std::setw(15) << "Name" << std::setw(15) << "Age" << std::setw(15) << "ID" << std::setw(15) << "College" << std::setw(15) << "GPA" << std::setw(15) << "Grade" << std::setw(15) << std::endl;
+
+    for (int i = 0; i < recordCount(); i++)
+    {
+        if (vec[i]->getUniv() == "UCD")
+        {
+
+            std::cout << std::left << std::setw(15) << vec[i]->getName() << std::setw(15) << vec[i]->getAge() << std::setw(15) << vec[i]->getID() << std::setw(15) << vec[i]->getCollege() << std::setw(15) << vec[i]->getgpa() << std::setw(15) << vec[i]->getLetterGrade() << std::endl;
+        }
+    }
+
+    std::cout << std::left << "Metro State" << std::endl;
+    std::cout << std::left << std::setw(15) << "Name" << std::setw(15) << "Age" << std::setw(15) << "ID" << std::setw(15) << "College" << std::setw(15) << "GPA" << std::setw(15) << "Grade" << std::setw(15) << std::endl;
+
+    for (int i = 0; i < recordCount(); i++)
+    {
+        if (vec[i]->getUniv() == "Metro State")
+        {
+            std::cout << std::left << std::setw(15) << vec[i]->getName() << std::setw(15) << vec[i]->getAge() << std::setw(15) << vec[i]->getID() << std::setw(15) << vec[i]->getCollege() << std::setw(15) << vec[i]->getgpa() << std::setw(15) << vec[i]->getLetterGrade() << std::endl;
+        }
+    }
+}
+main.cpp
+/*
+*******************************************************
+Name      :  Yaseer Sabir
+Class     :  CSC 2312 Section 004
+PA#       :  PA8  CollegePerson
+Due Date  :  11/22/2024
+*******************************************************
+*/
+
+#include <iostream>
+#include <vector>
+#include "CollegePerson.h"
+#include "functions.h"
+
+int main()
+{
+    // Print greeting message
+    greeting();
+
+    // Create a vector to hold CollegePerson pointers
+    std::vector<CollegePerson *> collegePersons;
+
+    // Test constructors and setters/getters for CollegePerson
+    CollegePerson *person1 = new CollegePerson("John Jones", 22, "UCD", "Engineering", 813);
+    CollegePerson *person2 = new CollegePerson("Sara Smith", 19, "Metro State", "Engineering", 805);
+
+    // Test setters and getters in Person and CollegePerson
+    person1->setName("John Doe");
+    person1->setAge(23);
+    person1->setUniv("Metro State");
+    person1->setCollege("Management");
+    person1->setID(427);
+    person1->setEarned(85.5);
+    person1->setTotal(100.0);
+    person1->setGrade(3.5);
+    person1->setgpa(3.5);
+    person1->setLetterGrade("B+");
+
+    // Display the test results
+    std::cout << "Testing individual methods:" << std::endl;
+    std::cout << "Name: " << person1->getName() << std::endl;
+    std::cout << "Age: " << person1->getAge() << std::endl;
+    std::cout << "University: " << person1->getUniv() << std::endl;
+    std::cout << "College: " << person1->getCollege() << std::endl;
+    std::cout << "ID: " << person1->getID() << std::endl;
+    std::cout << "Total Earned: " << person1->getEarned() << std::endl;
+    std::cout << "Total Points: " << person1->getTotal() << std::endl;
+    std::cout << "GPA: " << person1->getgpa() << std::endl;
+    std::cout << "Letter Grade: " << person1->getLetterGrade() << std::endl;
+
+    std::cout << std::endl;
+
+    // Add instances to the vector
+    collegePersons.push_back(person1);
+    collegePersons.push_back(person2);
+
+    // Test recordCount
+    int count = recordCount();
+    std::cout << "Number of records (expected): " << count << std::endl;
+
+    // Populate collegePersons with records from file
+    getInput(collegePersons);
+
+    // Calculate grades for each CollegePerson
+    calcGrades(collegePersons);
+
+    // Display all records, grouped by university
+    display(collegePersons);
+
+    // Clean up dynamically allocated memory
+    for (CollegePerson *person : collegePersons)
+    {
+        delete person;
+    }
+
+    return 0;
+}
+
+Person.cpp
+#include "Person.h"
+
+/*********************************************************
+ * Default constructor initializing name as an empty string
+ * and age as 0, providing a base state for any Person instance.
+ *********************************************************/
+Person::Person() : name(""), age(0) {}
+
+/*********************************************************
+ * Parameterized constructor for initializing the name and
+ * age of the Person with specific values.
+ *********************************************************/
+Person::Person(std::string name, int age) : name(name), age(age) {}
+
+/*********************************************************
+ * Sets the age of the Person.
+ *********************************************************/
+void Person::setAge(int age)
+{
+    this->age = age;
+}
+
+/*********************************************************
+ * Returns the age of the Person.
+ *********************************************************/
+int Person::getAge()
+{
+    return this->age;
+}
+
+/*********************************************************
+ * Sets the name of the Person.
+ *********************************************************/
+void Person::setName(std::string name)
+{
+    this->name = name;
+}
+
+/*********************************************************
+ * Returns the name of the Person.
+ *********************************************************/
+std::string Person::getName()
+{
+    return this->name;
+}
+
+Person.h
+/*********************************************************
+ * Summary:
+ *    This header file defines the `Person` class, representing
+ *    a general person with basic attributes like name and age.
+ *    The class provides methods for setting and retrieving these
+ *    attributes, allowing derived classes to expand on this base.
+ *
+ * Methods:
+ *    Person() - Default constructor, initializes empty name and age 0.
+ *    Person(std::string, int) - Parameterized constructor for name
+ *       and age initialization.
+ *    void setAge(int) - Sets the age of the person.
+ *    int getAge() - Returns the person's age.
+ *    void setName(std::string) - Sets the person's name.
+ *    std::string getName() - Returns the person's name.
+ *
+ *********************************************************/
+
+#ifndef PERSON_H
+#define PERSON_H
+#include <string>
+
+class Person
+{
+protected:
+    std::string name; // Name of the person
+    int age;          // Age of the person
+
+public:
+    // Constructors
+    Person();                 // Default constructor
+    Person(std::string, int); // Parameterized constructor
+
+    // Setters and Getters
+    void setAge(int); // Sets the person's age
+    int getAge();     // Gets the person's age
+
+    void setName(std::string); // Sets the person's name
+    std::string getName();     // Gets the person's name
+};
+
+#endif

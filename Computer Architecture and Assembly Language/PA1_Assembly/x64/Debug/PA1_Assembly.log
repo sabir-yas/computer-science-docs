@@ -1,0 +1,7 @@
+﻿  Assembling Task1.asm...
+Task1.asm(12): error A2008: syntax error : .
+Task1.asm(13): error A2008: syntax error : .
+Task1.asm(49): error A2008: syntax error : main
+Task1.asm(49): error A2088: END directive required at end of file
+Task1.asm(25): error A2006: undefined symbol : @data
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"x64\Debug\Task1.obj" /W3 /errorReport:prompt  /TaTask1.asm" exited with code 1.

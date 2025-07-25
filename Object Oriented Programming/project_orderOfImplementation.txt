@@ -1,0 +1,42 @@
+For Customers
+Features to Implement Post-Authentication:
+Product Catalog:
+
+Show available products with search and filter options.
+Allow users to browse and view product details.
+Shopping Cart:
+
+Enable adding, removing, and viewing items in the cart.
+Calculate the total price dynamically.
+Order Management:
+
+Allow users to place an order from their cart.
+Provide an order history feature to review past purchases.
+Implement an order tracking system (e.g., status: "Processing," "Shipped," "Delivered").
+Payment Integration:
+
+Simulate a payment system for order placement.
+Show a confirmation screen after payment.
+Profile Management:
+
+Allow users to update their details (e.g., email, password, address).
+Include a logout option to terminate the session.
+For Admins
+Features to Implement Post-Authentication:
+Product Management:
+
+Add new products to the catalog.
+Update product details like price, stock, and description.
+Delete outdated or irrelevant products.
+Sales Reports:
+
+Generate and display sales reports, including:
+Total sales for a day/week/month.
+Most purchased products.
+Revenue trends.
+Customer Queries:
+
+Provide an interface to view and respond to customer queries or complaints.
+Order Management (Optional):
+
+Admins might need access to view all orders, update statuses, or handle returns/refunds

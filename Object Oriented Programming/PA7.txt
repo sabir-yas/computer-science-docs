@@ -1,0 +1,521 @@
+main.cpp
+/*
+*******************************************************
+Name      :  Yaseer Sabir
+Class     :  CSC 2312 Section 004
+PA#       :  PA7  Loan
+Due Date  :  08/11/2024
+*******************************************************
+*/
+#include "Loan.h"
+#include "SimpleLoan.h"
+#include "AmortizedLoan.h"
+#include <iostream>
+
+int main()
+{
+    //Loan class testing
+    Loan loan;
+    std::cout << "Monthly Payment: " << loan.monthlyPayment() << std::endl;
+    loan.displayLoan();
+    loan.saveLoan();
+
+    Loan loan2(2030.5, 35, 3, "");
+    std::cout << "Monthly Payment: " << loan2.monthlyPayment() << std::endl;
+    loan2.displayLoan();
+    loan2.saveLoan();
+
+    std::cout << std:: endl;
+
+    //Simple Loan testing
+    SimpleLoan loan3;
+    std::cout << "Monthly Payment: " << loan3.monthlyPayment() << std::endl;
+    loan3.displayLoan();
+    loan3.saveLoan();
+
+    SimpleLoan loan4(5340.523, 35, 5);
+    std::cout << "Monthly Payment: " << loan4.monthlyPayment() << std::endl;
+    loan4.displayLoan();
+    loan4.saveLoan();
+
+    std::cout << std:: endl;
+
+    //Amortized Loan testing
+    AmortizedLoan loan5;
+    std::cout << "Monthly Payment: " << loan5.monthlyPayment() << std::endl;
+    loan5.displayLoan();
+    loan5.saveLoan();
+
+    std::cout << std:: endl;
+
+    AmortizedLoan loan6(43000.5, 75, 5);
+    std::cout << "Monthly Payment" << loan6.monthlyPayment() << std::endl;
+    loan6.displayLoan();
+    loan6.saveLoan();
+    
+    return 0;
+}
+
+Loan.h
+/*********************************************************
+ * This header file defines the `Loan` class, which represents
+ * a simple loan with various attributes, including principal amount,
+ * annual interest rate, loan term length, and loan type. The class
+ * provides methods for setting and retrieving these values, calculating
+ * monthly payments, displaying loan information, and saving loan data
+ * to a file. This file includes protection against multiple inclusions.
+ *********************************************************/
+
+#ifndef LOAN_H // Header guard to prevent multiple inclusions
+#define LOAN_H
+
+#include <string> // Include string library for std::string type
+
+class Loan
+{
+protected:
+    float principal;      // Principal amount of the loan in dollars
+    float interestRate;   // Annual interest rate as a percentage (0-100)
+    int loanLength;       // Loan term length in years
+    std::string loanType; // Type of loan (e.g., "Mortgage", "Auto Loan")
+
+public:
+    /*********************************************************
+     * Loan() - Default constructor
+     * Initializes a Loan object with default values.
+     *********************************************************/
+    Loan();
+
+    /*********************************************************
+     * Loan(float, float, int, std::string) - Parameterized constructor
+     * Initializes a Loan object with specific values for each attribute.
+     *********************************************************/
+    Loan(float principal, float interestRate, int loanLength, std::string loanType);
+
+    /*********************************************************
+     * getPrincipal() - Getter for the principal amount.
+     *********************************************************/
+    float getPrincipal();
+
+    /*********************************************************
+     * getInterestRate() - Getter for the annual interest rate.
+     *********************************************************/
+    float getInterestRate();
+
+    /*********************************************************
+     * getLoanLength() - Getter for the loan term length.
+     *********************************************************/
+    float getLoanLength();
+
+    /*********************************************************
+     * getLoanType() - Getter for the loan type.
+     *********************************************************/
+    std::string getLoanType();
+
+    /*********************************************************
+     * setPrincipal(float) - Setter for the principal amount.
+     *********************************************************/
+    void setPrincipal(float principal);
+
+    /*********************************************************
+     * setInterestRate(float) - Setter for the annual interest rate.
+     *********************************************************/
+    void setInterestRate(float interestRate);
+
+    /*********************************************************
+     * setLoanLength(int) - Setter for the loan term length.
+     *********************************************************/
+    void setLoanLength(int loanLength);
+
+    /*********************************************************
+     * setLoanType(std::string) - Setter for the loan type.
+     *********************************************************/
+    void setLoanType(std::string loanType);
+
+    /*********************************************************
+     * monthlyPayment() - Calculates the monthly payment for the loan.
+     * This is a virtual method that can be overridden by derived classes
+     * to provide specific monthly payment calculations.
+     *********************************************************/
+    virtual float monthlyPayment();
+
+    /*********************************************************
+     * displayLoan() - Displays loan details.
+     * Prints the loan information, including principal, interest rate,
+     * loan length, and loan type, to the console in a formatted manner.
+     *********************************************************/
+    void displayLoan();
+
+    /*********************************************************
+     * saveLoan() - Saves loan details to a file.
+     * Writes loan information to "loans.txt" in the "data" directory,
+     * with attributes separated by spaces.
+     *********************************************************/
+    void saveLoan();
+};
+
+#endif // End of LOAN_H
+
+Loan.cpp
+/*********************************************************
+ * Summary: This file includes the implementation for the Loan class
+ * (defined in Loan.h).
+ *
+ * 1) There are two constructors. The first one takes in no parameters
+ *    and initializes default values. The second one takes in all the
+ *    member variables: principal, interest rate, loan length, and loan type.
+ * 2) The set methods (setPrincipal, setInterestRate, etc.) allow setting
+ *    each member variable individually.
+ * 3) The get methods (getPrincipal, getInterestRate, etc.) return the
+ *    current values of each member variable.
+ * 4) The monthlyPayment() method provides a placeholder return value and
+ *    can be overridden in derived classes.
+ * 5) The displayLoan() method outputs the loan details in a formatted manner.
+ * 6) The saveLoan() method saves the loan information to a text file
+ *    located in the `data` directory in the format specified by the assignment.
+ *
+ * Author: Yaseer Sabir
+ * Created: October 27, 2024
+ * Summary of Modifications [if applicable]:
+ *      27 Oct 2024 – created file with constructors and getters/setters
+ *      27 Oct 2024 – implemented displayLoan() to show formatted details
+ *      27 Oct 2024 – implemented saveLoan() to save data to file
+ *********************************************************/
+
+#include <iostream> // For input and output operations
+#include "Loan.h"   // Include Loan class header
+#include <iomanip>  // For formatted output
+#include <fstream>  // For file I/O operations
+
+/*********************************************************
+ * Loan() - Default constructor
+ * Initializes a Loan object with default values: principal,
+ * interestRate, and loanLength set to 0, and loanType set to an
+ * empty string.
+ *********************************************************/
+Loan::Loan()
+{
+    principal = 0.0;
+    interestRate = 0.0;
+    loanLength = 0;
+    loanType = "";
+}
+
+/*********************************************************
+ * Loan(float, float, int, std::string) - Parameterized constructor
+ * Initializes a Loan object with specified values for principal,
+ * interestRate, loanLength, and loanType.
+ *********************************************************/
+Loan::Loan(float principal, float interestRate, int loanLength, std::string loanType)
+{
+    this->principal = principal;
+    this->interestRate = interestRate;
+    this->loanLength = loanLength;
+    this->loanType = loanType;
+}
+
+/*********************************************************
+ * getPrincipal() - Getter for principal
+ * Returns the current principal amount.
+ *********************************************************/
+float Loan::getPrincipal()
+{
+    return principal;
+}
+
+/*********************************************************
+ * setPrincipal(float) - Setter for principal
+ * Sets the principal amount of the loan.
+ *********************************************************/
+void Loan::setPrincipal(float principal)
+{
+    this->principal = principal;
+}
+
+/*********************************************************
+ * getInterestRate() - Getter for interest rate
+ * Returns the current interest rate.
+ *********************************************************/
+float Loan::getInterestRate()
+{
+    return interestRate;
+}
+
+/*********************************************************
+ * setInterestRate(float) - Setter for interest rate
+ * Sets the interest rate of the loan.
+ *********************************************************/
+void Loan::setInterestRate(float interestRate)
+{
+    this->interestRate = interestRate;
+}
+
+/*********************************************************
+ * getLoanLength() - Getter for loan length
+ * Returns the current loan length in years.
+ *********************************************************/
+float Loan::getLoanLength()
+{
+    return loanLength;
+}
+
+/*********************************************************
+ * setLoanLength(int) - Setter for loan length
+ * Sets the loan length in years.
+ *********************************************************/
+void Loan::setLoanLength(int loanLength)
+{
+    this->loanLength = loanLength;
+}
+
+/*********************************************************
+ * getLoanType() - Getter for loan type
+ * Returns the type of the loan as a string.
+ *********************************************************/
+std::string Loan::getLoanType()
+{
+    return loanType;
+}
+
+/*********************************************************
+ * setLoanType(std::string) - Setter for loan type
+ * Sets the loan type.
+ *********************************************************/
+void Loan::setLoanType(std::string loanType)
+{
+    this->loanType = loanType;
+}
+
+/*********************************************************
+ * monthlyPayment() - Calculates and returns the monthly payment.
+ * This is a virtual method that can be overridden in derived classes.
+ *********************************************************/
+float Loan::monthlyPayment()
+{
+    return 0.0;
+}
+
+/*********************************************************
+ * displayLoan() - Displays loan details
+ * Outputs loan information to the console in a formatted
+ * manner, including loan type, principal, interest rate,
+ * loan length, and monthly payment.
+ *********************************************************/
+void Loan::displayLoan()
+{
+    std::cout << "Loan Overview" << std::endl;
+    std::cout << "================================" << std::endl;
+    std::cout << std::left << std::setw(18) << "Loan Type:" << this->getLoanType() << std::endl;
+    std::cout << std::left << std::setw(18) << "Principal:" << this->getPrincipal() << std::endl;
+    std::cout << std::left << std::setw(18) << "Interest Rate:" << this->getInterestRate() << "%" << std::endl;
+    std::cout << std::left << std::setw(18) << "Length in Years:" << this->getLoanLength() << std::endl;
+    std::cout << std::left << std::setw(18) << "Monthly Payment:" << this->monthlyPayment() << std::endl;
+}
+
+/*********************************************************
+ * saveLoan() - Saves loan information to a file
+ * Writes loan details to "loans.txt" in the "./data/" directory
+ * in the format: principal, interest rate, and loan length separated
+ * by spaces. The file will be overwritten each time.
+ *********************************************************/
+void Loan::saveLoan()
+{
+    // Open the file in write mode (this will overwrite the file each time)
+    std::ofstream outFile("./data/loans.txt");
+
+    // Check if the file was opened successfully
+    if (outFile.is_open())
+    {
+        // Write the loan information to the file in the specified format
+        outFile << principal << " " << interestRate << " " << loanLength << std::endl;
+
+        // Close the file
+        outFile.close();
+    }
+}
+
+SimpleLoan.h
+/*********************************************************
+ * This header file defines the `SimpleLoan` class, which is a
+ * derived class of `Loan`. It represents a specific type of loan 
+ * with methods to initialize its parameters and calculate the monthly 
+ * payment. The `monthlyPayment()` method is overridden to provide 
+ * the specific calculation for this loan type.
+ *********************************************************/
+
+#ifndef SIMPLELOAN_H       // Header guard to prevent multiple inclusions
+#define SIMPLELOAN_H
+
+#include "Loan.h"          // Include base Loan class
+
+class SimpleLoan : public Loan {
+public:
+    /*********************************************************
+     * SimpleLoan() - Default constructor
+     * Initializes a SimpleLoan object with default values.
+     *********************************************************/
+    SimpleLoan();
+
+    /*********************************************************
+     * SimpleLoan(float, float, int) - Parameterized constructor
+     * Initializes a SimpleLoan object with specific values for principal,
+     * annual interest rate, and loan length.
+     *********************************************************/
+    SimpleLoan(float principal, float interestRate, int loanLength);
+
+    /*********************************************************
+     * monthlyPayment() - Calculates the monthly payment.
+     * This method overrides the base class method to provide the
+     * specific monthly payment calculation for a SimpleLoan.
+     *********************************************************/
+    float monthlyPayment() override;
+};
+
+#endif // End of SIMPLELOAN_H
+
+SimpleLoan.cpp
+/*********************************************************
+ * Summary: This file implements the `SimpleLoan` class, which
+ * is derived from the `Loan` class. It includes constructors
+ * for initializing a `SimpleLoan` object and an overridden
+ * `monthlyPayment()` method to calculate the monthly payment
+ * specific to a simple loan.
+ *
+ * Author: Yaseer Sabir
+ * Created: October 27, 2024
+ * Summary of Modifications [if applicable]:
+ *      27 Oct 2024 – created constructors and implemented monthlyPayment
+ *********************************************************/
+
+#include "SimpleLoan.h" // Include header for SimpleLoan
+#include <cmath>        // Include cmath for mathematical functions
+
+/*********************************************************
+ * SimpleLoan() - Default constructor
+ * Calls the base class `Loan` default constructor to
+ * initialize all values to their defaults.
+ *********************************************************/
+SimpleLoan::SimpleLoan() : Loan()
+{
+}
+
+/*********************************************************
+ * SimpleLoan(float, float, int) - Parameterized constructor
+ * Calls the base class `Loan` constructor to initialize the
+ * principal, interest rate, and loan length with specified values.
+ * The loan type is set to "Simple Loan".
+ *********************************************************/
+SimpleLoan::SimpleLoan(float principal, float interestRate, int loanLength)
+    : Loan(principal, interestRate, loanLength, "Simple Loan")
+{
+}
+
+/*********************************************************
+ * monthlyPayment() - Calculates the monthly payment
+ * Calculates the monthly payment for a simple loan based
+ *********************************************************/
+float SimpleLoan::monthlyPayment()
+{
+    int months = loanLength * 12;                  // Convert loan term from years to months
+    float monthlyRate = (interestRate / 100) / 12; // Convert annual interest rate to monthly rate
+
+    // Calculate monthly payment based on simplified formula
+    float monPayment = principal * ((monthlyRate * months) + 1) / months;
+
+    return monPayment;
+}
+
+AmortizedLoan.cpp
+/*********************************************************
+ * Summary: This file implements the `AmortizedLoan` class, which
+ * is derived from the `Loan` class. It includes constructors for
+ * initializing an `AmortizedLoan` object and an overridden
+ * `monthlyPayment()` method to calculate the monthly payment
+ * specific to an amortized loan using the amortization formula.
+ *
+ * Author: Yaseer Sabir
+ * Created: October 27, 2024
+ * Summary of Modifications [if applicable]:
+ *      27 Oct 2024 – created constructors and implemented monthlyPayment
+ *********************************************************/
+
+#include "AmortizedLoan.h" // Include header for AmortizedLoan
+#include <cmath>           // Include cmath for mathematical functions
+
+/*********************************************************
+ * AmortizedLoan() - Default constructor
+ * Calls the base class `Loan` default constructor to
+ * initialize all values to their defaults.
+ *********************************************************/
+AmortizedLoan::AmortizedLoan() : Loan()
+{
+}
+
+/*********************************************************
+ * AmortizedLoan(float, float, int) - Parameterized constructor
+ * Calls the base class `Loan` constructor to initialize the
+ * principal, interest rate, and loan length with specified values.
+ * The loan type is set to "Amortized Loan".
+ *********************************************************/
+AmortizedLoan::AmortizedLoan(float principal, float interestRate, int loanLength)
+    : Loan(principal, interestRate, loanLength, "Amortized Loan")
+{
+}
+
+/*********************************************************
+ * monthlyPayment() - Calculates the monthly payment
+ * Calculates the monthly payment for an amortized loan based
+ * on the principal, monthly interest rate, and loan term.
+ *********************************************************/
+float AmortizedLoan::monthlyPayment()
+{
+    int months = loanLength * 12;                  // Convert loan term from years to months
+    float monthlyRate = (interestRate / 100) / 12; // Convert annual interest rate to monthly rate
+
+    // Calculate monthly payment based on amortization formula
+    float monPayment = (principal * monthlyRate * pow(1 + monthlyRate, months)) /
+                       (pow(1 + monthlyRate, months) - 1);
+
+    return monPayment;
+}
+
+AmortizedLoan.h
+/*********************************************************
+ * This header file defines the `AmortizedLoan` class, which
+ * is a derived class of `Loan`. It represents an amortized loan
+ * with methods to initialize its parameters and calculate the monthly
+ * payment using an amortization formula. The `monthlyPayment()` method
+ * is overridden to provide a specific calculation for amortized loans.
+ *********************************************************/
+
+#ifndef AMORTIZEDLOAN_H // Header guard to prevent multiple inclusions
+#define AMORTIZEDLOAN_H
+
+#include "Loan.h" // Include base Loan class
+
+class AmortizedLoan : public Loan
+{
+public:
+    /*********************************************************
+     * AmortizedLoan() - Default constructor
+     * Initializes an AmortizedLoan object with default values.
+     *********************************************************/
+    AmortizedLoan();
+
+    /*********************************************************
+     * AmortizedLoan(float, float, int) - Parameterized constructor
+     * Initializes an AmortizedLoan object with specific values for
+     * principal, annual interest rate, and loan length.
+     *********************************************************/
+    AmortizedLoan(float principal, float interestRate, int loanLength);
+
+    /*********************************************************
+     * monthlyPayment() - Calculates the monthly payment.
+     * This method overrides the base class method to calculate
+     * the monthly payment specific to an amortized loan.
+     *********************************************************/
+    float monthlyPayment() override;
+};
+
+#endif // End of AMORTIZEDLOAN_H
+

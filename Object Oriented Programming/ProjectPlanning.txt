@@ -1,0 +1,64 @@
+Online shopping cart application
+
+User (Base):
+
+Derived by Customer and Admin.
+Product (Base):
+
+Derived by specific categories like Electronics, Clothing, Groceries, etc.
+Order (Base):
+
+Derived by CustomerOrder and AdminOrder.
+Payment (Base):
+
+Derived by CashPayment, CardPayment, and RewardMemberPayment.
+Application:
+
+Acts as the main controller, calling methods from Customer, Admin, Product, Cart, Order, and Payment to drive the application.
+
+welcome page saying welcome to Yaseer's All-in One General store
+Are you an existing customer, a new customer or the admin??
+new customer-> ask for email address, add to file, and take password
+existing customer->ask for email address, ask for password, check in file, and say welcome (name)
+
+show categories of products(electronics, clothing and apparel, home and kitchen, groceries and food, health and personal care, books and stationary, sports and outdoors, beauty and cosmetics, toys and games, office supplies)
+
+user chooses category( for example electronics), then chooses product(for example iphone) and looks at price. If user wants it, then they can add it to their cart, if not can leave the category.
+
+if user wants to go to a different category, then they can type exit and enter the other category's name.
+
+User goes on like this until they type Pay Now.
+The number of products are subtracted from the total number of the specific product.(eg. if 10 iphones are in inventory, then one will be subtracted if user takes one iphone)
+The user is able to view the cart( with option to delete any products they want)
+
+Payment system
+the user chooses a payment method(if cash then just enters the amount, if card then scans card, rewards member?? 2 percent discount each time).
+
+user then gets a receipt of the products bought with their price, payment method.
+thank you for shopping at Yaseer's All-in One General store
+gives option to view order history. and track specific order status.
+any questions and concerns(ask them)
+
+if admin then login. if matches with username password in system, allow access
+You've been logged in as admin.
+give options: View customers, Update products( add inventory, change number of products), view cashflow, and answer customer queries.
+
+
+Product (Product, Electronics, Clothing, Groceries)
+User (User, Customer, Admin)
+Order (Order, CustomerOrder, AdminOrder)
+Payment (Payment, CashPayment, CardPayment, RewardMemberPayment)
+Application (handling data loading, interactions, and the main loop)
+
+
+
+
+
+
+
+
+
+
+
+
+

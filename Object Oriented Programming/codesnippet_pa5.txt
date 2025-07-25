@@ -1,0 +1,24 @@
+int number;
+    std::cin >> number;
+    
+    int value = vector.at(number);
+    if (value > 0)
+    {
+        for (int i = 0; i < value; i++)
+        {
+            if (i != (vector.at(number) - 1))
+                std::cout << " " << "*";
+            else
+                std::cout << " " << "*" << " " << std::endl;
+        }
+    }
+    if (vector.at(number) < 0)
+    {
+        for (int i = 0; i < vector.at(number); i++)
+        {
+            if (i != (vector.at(number) - 1))
+                std::cout << "*" << " ";
+            else
+                std::cout << "*" << std::endl;
+        }
+    }

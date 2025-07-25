@@ -1,4 +1,10 @@
-# 📚 Study Notes & Assignment Repository
+
+# **Yaseer Sabir**
+## University of Colorado Denver
+
+![alt text](yaseer_pic.jpg)
+
+## 📚 Study Notes & Assignment Repository
 
 Welcome to my collection of study materials, assignment documents, and academic resources! This repository is designed to help fellow students by sharing organized course materials and examples.
 

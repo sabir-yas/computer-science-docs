@@ -1,0 +1,6 @@
+1) Does every infinite non-regular set have a regular subset? Prove it.
+2) Is the set of the form zz, where z is any binary string a CFL? Is it a regular set? Prove both.
+3) Does there exist a CFL whose complement is not a CFL? Prove it.
+4) Is the set of the form a^ib^j, where 0 < j < i < 2j, a CFL? Prove it.
+
+Bonus Question- Discuss Algebraic Ambiguity from my 1990 IPL paper(1/2 page limit)

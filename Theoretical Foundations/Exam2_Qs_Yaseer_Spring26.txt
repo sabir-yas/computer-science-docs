@@ -1,0 +1,8 @@
+From what I remember, these were the questions:-
+
+1) Is the set of binary strings that are not divisible by 4 a regular set? Prove it
+2) Is the set of the form zz, where z is any binary string a CFL? Is it a regular set? Prove both.
+3) Does there exist a non-CFL whose complement is a CFL? Prove it.
+4) Is the set of the form a^ib^j, where 0 < j < i < 2j, a CFL? Prove it.
+
+Bonus Question- Discuss Chomsky's paper and his contributions.

@@ -37,23 +37,15 @@ This repo is a centralized place for:
 2. **Search** — use GitHub's built-in search to find specific topics or keywords
 3. **Download** — click any file to preview, then download as needed
 
-## Courses
-
-*This section will be updated as materials are added.*
-
-- [ ] Course Name 1
-- [ ] Course Name 2
-- [ ] Course Name 3
-
 ## Academic Integrity
 
 These materials are shared strictly for learning and reference. Please follow your institution's academic integrity policies, use these as a supplement to your own understanding, and always cite sources appropriately in submitted work.
 
 ## Contact
 
-- **GitHub:** [@yourusername](https://github.com/yourusername)
+- **GitHub:** https://github.com/sabir-yas
 - Questions or feedback? Open an issue in this repo.
 
 ---
 
-*Last updated: [Date]*
+*Last updated: 5/11/2026*

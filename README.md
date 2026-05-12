@@ -1,30 +1,27 @@
+# Yaseer Sabir
+### B.S. Computer Science · University of Colorado Denver
 
-# **Yaseer Sabir**
-## University of Colorado Denver
-## Please Note: Readme is still in progress
 
-![alt text](yaseer_pic.jpg)
+> **Note:** This README is still being updated as the repository grows.
 
-## 📚 Study Notes & Assignment Repository
+---
 
-Welcome to my collection of study materials, assignment documents, and academic resources! This repository is designed to help fellow students by sharing organized course materials and examples.
+## Study Notes & Course Materials
 
-## 🎯 Purpose
+A personal collection of notes, assignments, and academic resources from my time at CU Denver. If you're a fellow student, feel free to browse, reference, and adapt anything here.
 
-This repository serves as a centralized hub for:
+## Purpose
+
+This repo is a centralized place for:
+- Course notes and study guides
 - Assignment examples and templates
-- Study guides and notes
-- Course materials and references
-- Academic resources for various subjects
+- Reference materials and useful tools
+- Resources organized by subject
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
-├── course-name-1/
-│   ├── assignments/
-│   ├── notes/
-│   └── resources/
-├── course-name-2/
+├── course-name/
 │   ├── assignments/
 │   ├── notes/
 │   └── resources/
@@ -34,48 +31,29 @@ This repository serves as a centralized hub for:
     └── tools/
 ```
 
-## 🚀 How to Use This Repository
+## How to Use
 
-1. **Browse by Course**: Navigate to specific course folders to find relevant materials
-2. **Search**: Use GitHub's search functionality to find specific topics or keywords
-3. **Download**: Click on any file to view it, then download if needed
-4. **Contribute**: Feel free to suggest improvements or report issues
+1. **Browse by course** — navigate to the relevant folder for notes and materials
+2. **Search** — use GitHub's built-in search to find specific topics or keywords
+3. **Download** — click any file to preview, then download as needed
 
-## 📋 Available Courses
+## Courses
 
-*Update this section with your actual courses:*
+*This section will be updated as materials are added.*
 
-- [ ] **Course Name 1** - Brief description
-- [ ] **Course Name 2** - Brief description
-- [ ] **Course Name 3** - Brief description
+- [ ] Course Name 1
+- [ ] Course Name 2
+- [ ] Course Name 3
 
-## 🤝 Contributing & Feedback
+## Academic Integrity
 
-If you find these materials helpful or have suggestions for improvement:
-- Open an issue for questions or feedback
-- Feel free to fork this repository for your own use
-- Share with other students who might benefit
+These materials are shared strictly for learning and reference. Please follow your institution's academic integrity policies, use these as a supplement to your own understanding, and always cite sources appropriately in submitted work.
 
-## ⚠️ Academic Integrity Notice
+## Contact
 
-**Important**: These materials are shared for educational purposes and to help with understanding concepts. Please ensure you:
-- Follow your institution's academic integrity policies
-- Use these as reference and learning aids, not for direct copying
-- Understand that academic standards and requirements may vary
-- Always cite sources appropriately in your own work
-
-## 📞 Contact
-
-If you have questions or would like to connect:
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Feel free to open an issue in this repository
-
-## 📜 License
-
-This repository is shared under [MIT License](LICENSE) - feel free to use and adapt these materials for educational purposes.
+- **GitHub:** [@yourusername](https://github.com/yourusername)
+- Questions or feedback? Open an issue in this repo.
 
 ---
 
-**Happy studying!** 🎓
-
-*Last updated: [Current Date]*
+*Last updated: [Date]*

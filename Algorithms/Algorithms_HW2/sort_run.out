@@ -1,0 +1,26 @@
+
+Processing rand1000.txt...
+InsertionSort - time: 0.0343s, comparisons: 247366
+MergeSort - time: 0.0025s, comparisons: 8713
+
+Processing rand10000.txt...
+InsertionSort - time: 3.4814s, comparisons: 24992745
+MergeSort - time: 0.0337s, comparisons: 120462
+
+Processing rand100000.txt...
+InsertionSort - time: 371.8250s, comparisons: 2505319309
+MergeSort - time: 0.4128s, comparisons: 1536307
+
+Processing rand250000.txt...
+InsertionSort - time: 2380.3074s, comparisons: 15645054948
+MergeSort - time: 1.1485s, comparisons: 4168028
+
+Processing rand500000.txt...
+InsertionSort - time: 9212.3105s, comparisons: 62476143445
+MergeSort - time: 2.4034s, comparisons: 8836552
+
+Processing rand1000000.txt...
+InsertionSort - time: 38551.5475s, comparisons: 249926868099
+MergeSort - time: 5.2667s, comparisons: 18673054
+
+Results saved as runtime_comparison.png and comparison_counts.png

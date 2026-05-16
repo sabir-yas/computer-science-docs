@@ -1,0 +1,14 @@
+module(2, "graphdfs.m",
+	graphdfs,
+	{},
+	{builtin, io, private_builtin},
+	{list, string},
+	{},
+	{},
+	{},
+	{},
+	{},
+	no_foreign_export,
+	no_main,
+	{}
+).

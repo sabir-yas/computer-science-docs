@@ -1,0 +1,14 @@
+module(2, "calc.m",
+	calc,
+	{},
+	{builtin, io, private_builtin},
+	{int, string},
+	{},
+	{},
+	{},
+	{},
+	{},
+	no_foreign_export,
+	no_main,
+	{}
+).

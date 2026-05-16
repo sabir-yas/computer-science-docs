@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem 1.1 – Comparison of Running Times</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Problem 1.1 – Comparison of Running Times</h2>
+  <p>We assume 30 days per month and 365 days per year. All times are converted to microseconds. Extremely large values are expressed in scientific notation.</p>
+  <table>
+    <tr>
+      <th>f(n)</th><th>1 second</th><th>1 minute</th><th>1 hour</th><th>1 day</th><th>1 month</th><th>1 year</th><th>1 century</th>
+    </tr>
+    <tr><td>log n</td><td>10^3.01e+05</td><td>10^1.81e+07</td><td>10^1.09e+09</td><td>10^2.94e+10</td><td>10^8.82e+11</td><td>10^9.60e+13</td><td>10^9.49e+14</td></tr>
+    <tr><td>√n</td><td>1,000,000,000,000</td><td>3.6e15</td><td>1.296e19</td><td>7.46496e21</td><td>6.721e23</td><td>3.155e25</td><td>9.945e27</td></tr>
+    <tr><td>n</td><td>1,000,000</td><td>60,000,000</td><td>3,600,000,000</td><td>86,400,000,000</td><td>2.592e12</td><td>3.1536e13</td><td>3.1536e15</td></tr>
+    <tr><td>n log n</td><td>62,746</td><td>2,801,417</td><td>1.329e8</td><td>2.658e9</td><td>7.826e10</td><td>2.501e12</td><td>6.861e13</td></tr>
+    <tr><td>n^2</td><td>1,000</td><td>7,745</td><td>60,000</td><td>293,938</td><td>1,610,510</td><td>5,618,655</td><td>56,156,922</td></tr>
+    <tr><td>n^3</td><td>100</td><td>391</td><td>1,530</td><td>4,431</td><td>14,423</td><td>31,622</td><td>146,646</td></tr>
+    <tr><td>2^n</td><td>19</td><td>25</td><td>31</td><td>36</td><td>41</td><td>44</td><td>51</td></tr>
+    <tr><td>n!</td><td>9</td><td>11</td><td>12</td><td>13</td><td>15</td><td>16</td><td>17</td></tr>
+  </table>
+</body>
+</html>

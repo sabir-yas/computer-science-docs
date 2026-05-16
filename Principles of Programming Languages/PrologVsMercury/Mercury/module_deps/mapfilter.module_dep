@@ -1,0 +1,14 @@
+module(2, "mapfilter.m",
+	mapfilter,
+	{},
+	{builtin, io, private_builtin},
+	{int, list, string},
+	{},
+	{},
+	{},
+	{},
+	{},
+	no_foreign_export,
+	no_main,
+	{}
+).

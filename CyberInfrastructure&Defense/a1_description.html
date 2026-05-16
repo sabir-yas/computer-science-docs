@@ -1,0 +1,639 @@
+<!DOCTYPE html><html><head>
+      <title>a1_description</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\jafariha\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h2 id="assignment-1-survey-and-analysis-of-cyber-attacks--testbed-setup"><strong>Assignment 1: Survey and Analysis of Cyber Attacks &amp; Testbed Setup</strong> </h2>
+<h4 id="csci-5743-fall-2025">CSCI 5743, Fall 2025 </h4>
+<h4 id="total-points-100"><strong>Total Points</strong>: 100 </h4>
+<hr>
+<h2 id="learning-objectives"><strong>Learning Objectives</strong> </h2>
+<ul>
+<li>
+<h4>Section 1 (Conceptual Assignments):</h4>
+<ul>
+<li>Develop an understanding of <strong>core cybersecurity principles</strong>, including the <strong>CIA triad</strong> and <strong>threat actor motivations</strong>.</li>
+<li>Research and analyze <strong>real-world Advanced Persistent Threats (APTs)</strong> using the <strong>MITRE ATT&amp;CK framework</strong>.</li>
+</ul>
+</li>
+<li>
+<h4>Section 2 (Practical Assignments):</h4>
+<ul>
+<li>Set up and configure a <strong>virtualized testbed environment</strong> to simulate cyberattacks and defenses.</li>
+<li>Learn <strong>basic Bash scripting</strong> and its applications in cybersecurity automation.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Note: Please read the <a href="#assignment-1-submission-guidelines">submission Guidelines</a> carefully before starting the assignment.</strong></p>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 20px; width: 100%;">
+</div>
+<h2 id="section-1-conceptual-assignments-50-points---analysis-of-cyber-attacks"><strong>Section 1: Conceptual Assignments (50 Points) - Analysis of Cyber Attacks</strong> </h2>
+<h4 id="objectives">Objectives: </h4>
+<ol>
+<li>
+<p><strong>Analyze Cybersecurity Incidents</strong> – Investigate real-world attacks to understand methodologies, exploited vulnerabilities, and defense strategies.</p>
+</li>
+<li>
+<p><strong>Explore MITRE ATT&amp;CK &amp; APT TTPs</strong> – Use MITRE ATT&amp;CK to study two APT tactics, and its techniques, and procedures (TTPs).</p>
+</li>
+<li>
+<p><strong>Research APT Groups &amp; Campaigns</strong> – Examine two APT groups, their key objectives, attack techniques, and cyber campaigns.</p>
+</li>
+<li>
+<p><strong>Assess Detection &amp; Mitigation Strategies</strong> – Identify security controls, monitoring techniques, and defense mechanisms against APT threats.</p>
+</li>
+</ol>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 10px; width: 100%;">
+</div>
+<h3 id="deliverables-for-section-1"><strong>Deliverables for Section 1:</strong> </h3>
+<ul>
+<li>Complete the <a href="a1_report.md">provided report file</a>, ensuring all responses for <strong>Tasks 1–4</strong> follow the structured format.</li>
+<li>Provide <strong>clear, well-organized answers</strong> with supporting details, examples, and references where applicable.</li>
+</ul>
+<hr>
+<h4 id="grading-rubric-for-section-1-50-points"><strong>Grading Rubric for Section 1 (50 Points)</strong> </h4>
+<table>
+<thead>
+<tr>
+<th><strong>Task #</strong></th>
+<th><strong>Task</strong></th>
+<th><strong>Criteria for Full Points</strong></th>
+<th><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task 1</strong></td>
+<td><strong>Cybersecurity Incident Analysis</strong></td>
+<td>Selected <strong>two relevant incidents</strong>, provided a <strong>clear attack overview</strong>, identified <strong>three key techniques</strong>, classified <strong>threat actors</strong>, analyzed <strong>violated security goals (CIA Triad)</strong>, and proposed <strong>three effective defenses</strong> with explanations.</td>
+<td><strong>15</strong></td>
+</tr>
+<tr>
+<td><strong>Task 2</strong></td>
+<td><strong>Understanding APTs and MITRE ATT&amp;CK</strong></td>
+<td>Identified <strong>three tactics</strong> and <strong>two techniques per tactic</strong>, explained their <strong>use in real-world APT campaigns</strong>, and mapped them to <strong>MITRE ATT&amp;CK</strong> with <strong>detection and mitigation strategies</strong>.</td>
+<td><strong>15</strong></td>
+</tr>
+<tr>
+<td><strong>Task 3</strong></td>
+<td><strong>Research Two APT Threat Groups</strong></td>
+<td>Researched <strong>two active APT groups</strong>, summarized <strong>two major campaigns per group</strong>, analyzed <strong>objectives, attack techniques, and industries targeted</strong>, and mapped <strong>three techniques per group</strong> to <strong>MITRE ATT&amp;CK</strong>.</td>
+<td><strong>15</strong></td>
+</tr>
+<tr>
+<td><strong>Task 4</strong></td>
+<td><strong>Reflection and Analysis</strong></td>
+<td>Wrote a <strong>structured, insightful reflection (300–350 words)</strong> on <strong>APTs' challenges, detection, and defense</strong>, with <strong>key insights from MITRE ATT&amp;CK research</strong>.</td>
+<td><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="grading-notes"><strong>Grading Notes:</strong> </h4>
+<ul>
+<li><strong>Full points</strong> require <strong>detailed, well-structured answers with real-world examples and references</strong>.</li>
+<li><strong>Partial points</strong> for <strong>incomplete, vague, or missing key details</strong>.</li>
+<li><strong>Minimal/no points</strong> for <strong>inaccurate, unclear, or off-topic responses</strong>.</li>
+</ul>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 20px; width: 100%;">
+</div>
+<h2 id="tasks-for-section-1">Tasks for Section 1 </h2>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 10px; width: 100%;">
+</div>
+<h3 id="task-1-cybersecurity-incident-analysis"><strong>Task 1: Cybersecurity Incident Analysis</strong> </h3>
+<h4 id="step-1-select-two-recent-cybersecurity-incidents"><strong>Step 1: Select Two Recent Cybersecurity Incidents</strong> </h4>
+<p>Choose <strong>two high-impact cybersecurity incidents</strong> from the past <strong>3–5 years</strong>. Use <strong>reliable sources</strong> such as:</p>
+<ul>
+<li>MITRE ATT&amp;CK Incident Database (<a href="https://attack.mitre.org">https://attack.mitre.org</a>)</li>
+<li>Cybersecurity news sites (e.g., Krebs on Security, BleepingComputer, The Hacker News).</li>
+<li>Reports from security firms (e.g., Mandiant, CrowdStrike, Palo Alto Networks).</li>
+<li>Government agencies (e.g., CISA, NIST, ENISA).</li>
+</ul>
+<h5 id="criteria-for-selecting-incidents"><strong>Criteria for Selecting Incidents:</strong> </h5>
+<ul>
+<li><strong>Recency</strong>: Select incidents from <strong>the last 3–5 years</strong> to ensure relevance.</li>
+<li><strong>Impact</strong>: Choose incidents that affected <strong>a major organization, government, or critical infrastructure</strong>.</li>
+<li><strong>Technical Complexity</strong>: Look for incidents involving <strong>APT groups, sophisticated malware, or supply chain attacks</strong>.</li>
+<li><strong>Available Data</strong>: Ensure there is <strong>enough information</strong> on attack methods and responses.</li>
+</ul>
+<hr>
+<h4 id="step-2-analyze-each-incident"><strong>Step 2: Analyze Each Incident</strong> </h4>
+<p>For <strong>each</strong> selected incident, provide the following details:</p>
+<ol>
+<li>
+<p><strong>Attack Overview:</strong></p>
+<ul>
+<li><strong>What happened?</strong> Describe the breach, its target, and its impact.</li>
+<li><strong>Who was affected?</strong> (e.g., companies, industries, or government entities).</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Technical Methods Used (Three Techniques):</strong></p>
+<ul>
+<li>Identify <strong>three key attack techniques</strong> used (e.g., malware, spear phishing, privilege escalation).</li>
+<li>Provide a <strong>brief explanation</strong> of how each method was used in the attack.</li>
+</ul>
+</li>
+<li>
+<p><strong>Threat Actor Type:</strong></p>
+<ul>
+<li>Classify the <strong>type of attacker</strong> (e.g., nation-state, cybercriminal, insider).</li>
+<li>If known, identify the <strong>specific APT group or threat actor</strong> responsible.</li>
+</ul>
+</li>
+<li>
+<p><strong>Violated Security Goals:</strong></p>
+<ul>
+<li>Determine which part of the <strong>CIA Triad</strong> was compromised:
+<ul>
+<li><strong>Confidentiality</strong> (e.g., data theft).</li>
+<li><strong>Integrity</strong> (e.g., data manipulation).</li>
+<li><strong>Availability</strong> (e.g., ransomware causing system downtime).</li>
+</ul>
+</li>
+<li>Justify how the attack violated these security goals.</li>
+</ul>
+</li>
+<li>
+<p><strong>Proposed Defensive Measures:</strong></p>
+<ul>
+<li>Identify <strong>three security controls</strong> that could have <strong>prevented or mitigated</strong> the attack.</li>
+<li>Relate defenses to the <strong>CIA Triad</strong> (e.g., encryption for confidentiality, backups for availability).</li>
+</ul>
+</li>
+</ol>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 10px; width: 100%;">
+</div>
+<h3 id="task-2-understanding-apts-and-mitre-attck"><strong>Task 2: Understanding APTs and MITRE ATT&amp;CK</strong> </h3>
+<h4 id="step-1-explore-mitre-attck-enterprise-matrix"><strong>Step 1. Explore MITRE ATT&amp;CK Enterprise Matrix</strong> </h4>
+<p>Identify <strong>two different tactics</strong> from<a href="https://attack.mitre.org"> MITRE ATT&amp;CK</a> <strong>Enterprise Matrix</strong>. For each tactic:</p>
+<ul>
+<li>Mention the ID and name of the selected tactic, and explain its <strong>purpose</strong> in an APT attack.</li>
+<li>Provide a <strong>real-world example</strong> of how it has been used by adversaries.</li>
+</ul>
+<hr>
+<h4 id="step-2-identify-two-techniques-for-each-tactic"><strong>Step 2. Identify Two Techniques for Each Tactic</strong> </h4>
+<p>For each of the <strong>two selected tactics</strong> in Step 1, choose <strong>two techniques</strong> from the same <strong>Enterprise Matrix</strong>. This results in a total of <strong>six techniques</strong>. For each selected technique, provide the following details based on <strong>MITRE ATT&amp;CK</strong> data:</p>
+<ul>
+<li>
+<p><strong>1. Technique Identification &amp; Scope</strong></p>
+<ul>
+<li><strong>Technique Name &amp; ID:</strong> (e.g., Boot or Logon Autostart Execution - T1547)</li>
+<li><strong>Affected Platforms:</strong> (e.g., Windows, Linux, macOS, Network)</li>
+<li><strong>Required Permissions:</strong> (e.g., Administrator, root, user)</li>
+<li><strong>Tactics Associated:</strong> List the primary tactic(s) this technique is associated with.</li>
+</ul>
+</li>
+<li>
+<p><strong>2. Technique Overview</strong></p>
+<ul>
+<li><strong>Description:</strong> Explain how adversaries use this technique in attacks.</li>
+<li><strong>Sub-techniques:</strong> Identify <strong>up to three</strong> relevant sub-techniques, if applicable.</li>
+<li><strong>Adversary Goals:</strong> Describe what attackers aim to achieve when using this technique (e.g., persistence, privilege escalation, lateral movement).</li>
+</ul>
+</li>
+<li>
+<p><strong>3. Real-World APT Usage</strong></p>
+<ul>
+<li><strong>APT Groups (at least 2):</strong> Identify adversaries that have used this technique.</li>
+<li><strong>Attack Campaigns:</strong> Provide details on real-world cyber campaigns where this technique was used.</li>
+<li><strong>Example Attack Scenario:</strong> Explain how an APT group leveraged this technique in an intrusion.</li>
+</ul>
+</li>
+<li>
+<p><strong>4. Detection Strategies</strong></p>
+<ul>
+<li><strong>Data Sources (up to 3):</strong> Identify key monitoring methods to detect this technique.</li>
+<li><strong>Example Detection Methods:</strong> (e.g., Process monitoring, File creation tracking, Registry modification alerts).</li>
+<li><strong>Behavioral Indicators:</strong> Describe what security teams should look for to identify this technique in use.</li>
+</ul>
+</li>
+<li>
+<p><strong>5. Mitigation Strategies</strong></p>
+<ul>
+<li><strong>Defense Mechanisms (up to 2):</strong> Suggest methods to prevent or reduce the impact of this technique.</li>
+<li><strong>Examples:</strong> (e.g., Application control, Least privilege enforcement, Multi-factor authentication).</li>
+<li><strong>Security Best Practices:</strong> Provide recommendations organizations should implement to mitigate this attack technique.</li>
+</ul>
+</li>
+</ul>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 10px; width: 100%;">
+</div>
+<h3 id="task-3-research-two-apt-threat-groups"><strong>Task 3: Research Two APT Threat Groups</strong> </h3>
+<h4 id="step-1-select-two-recently-active-apt-groups"><strong>Step 1. Select Two Recently-Active APT Groups</strong> </h4>
+<p>Choose <strong>two APT groups</strong> from <strong>MITRE ATT&amp;CK</strong> (e.g., APT28, APT41, Lazarus Group), focusing on those that have been <strong>active within the past five years</strong>. Justify your reasoning for selecting these two APT groups.</p>
+<hr>
+<h4 id="step-2-analyze-apt-groups-activities"><strong>Step 2. Analyze APT Groups' Activities</strong> </h4>
+<p>Conduct research using <strong>MITRE ATT&amp;CK</strong>, and its references to credible cybersecurity reports, and incident analyses to gather the following key details for each group:</p>
+<ul>
+<li>
+<p><strong>1. Key Cyber Campaigns:</strong></p>
+<ul>
+<li>Identify <strong>at least two</strong> major cyber campaigns associated with the group.</li>
+<li>Provide <strong>a brief summary</strong> of each campaign, including:
+<ul>
+<li><strong>Timeframe</strong> of the attacks.</li>
+<li><strong>Regions or organizations targeted.</strong></li>
+<li><strong>Impact</strong> (e.g., data theft, system compromise, financial losses).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>2. Key Objectives:</strong></p>
+<ul>
+<li>Explain the group's <strong>primary motivations</strong>, such as:
+<ul>
+<li><strong>Espionage</strong> (state-sponsored intelligence gathering).</li>
+<li><strong>Financial gain</strong> (ransomware, banking trojans).</li>
+<li><strong>Disruption/Sabotage</strong> (damaging infrastructure, political motives).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>3. Key Technical Methods Used:</strong></p>
+<ul>
+<li>Describe the group's commonly used <strong>attack methods</strong>, such as:
+<ul>
+<li><strong>Spear phishing</strong> (email-based attack delivery).</li>
+<li><strong>Zero-day exploits</strong> (exploiting unknown software vulnerabilities).</li>
+<li><strong>Supply chain attacks</strong> (compromising third-party software or vendors).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>4. Key Security Goals Violated:</strong></p>
+<ul>
+<li>Identify which elements of the <strong>CIA triad</strong> were compromised:
+<ul>
+<li><strong>Confidentiality</strong> (e.g., sensitive data theft).</li>
+<li><strong>Integrity</strong> (e.g., data manipulation, wiping).</li>
+<li><strong>Availability</strong> (e.g., DDoS attacks, ransomware).</li>
+</ul>
+</li>
+<li>Provide <strong>specific examples</strong> from past campaigns.</li>
+</ul>
+</li>
+<li>
+<p><strong>5. Primary Attack Techniques (Three Per Group):</strong></p>
+<ul>
+<li>Identify <strong>three main techniques</strong> used by the APT group, referencing MITRE ATT&amp;CK.</li>
+<li>Include the <strong>MITRE ATT&amp;CK Technique ID</strong> (e.g., <strong>T1566 - Spear Phishing</strong>).</li>
+<li>Explain <strong>how the group uses each technique</strong> in their attacks.</li>
+</ul>
+</li>
+<li>
+<p><strong>6. Industries or Organizations Targeted:</strong></p>
+<ul>
+<li>List the <strong>sectors most affected</strong>, such as:
+<ul>
+<li>Government, Defense, Healthcare, Financial Services, Critical Infrastructure, Media.</li>
+</ul>
+</li>
+<li>Provide <strong>examples of specific organizations or countries targeted</strong> in past campaigns.</li>
+</ul>
+</li>
+</ul>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 10px; width: 100%;">
+</div>
+<h3 id="task-4-reflection-and-analysis"><strong>Task 4: Reflection and Analysis</strong> </h3>
+<p>Write a structured <strong>reflection essay (300–350 words)</strong> addressing the following sections:</p>
+<ul>
+<li>
+<p><strong>1. Challenges in Detecting APTs (100–125 words)</strong><br>
+Discuss why <strong>APTs are difficult to detect</strong>, considering:</p>
+<ul>
+<li><strong>Stealth and Persistence:</strong> How do APTs evade detection over extended periods?</li>
+<li><strong>Advanced Evasion Techniques:</strong> How do they bypass traditional security controls?</li>
+<li><strong>Use of Legitimate Tools:</strong> Why do attackers use system tools like <strong>PowerShell, WMI, or living-off-the-land binaries (LOLBins)</strong>?</li>
+<li><strong>Slow, Targeted Operations:</strong> Why do APTs operate over <strong>months or years</strong> without raising alarms?</li>
+</ul>
+</li>
+<li>
+<p><strong>2. Challenges in Defending Against APTs (100–125 words)</strong><br>
+Discuss why <strong>APTs are difficult to defend against</strong>, considering:</p>
+<ul>
+<li><strong>Sophistication of Attackers:</strong> How do APT actors adapt and evolve their methods?</li>
+<li><strong>Zero-Day Exploits:</strong> Why are undiscovered vulnerabilities a major challenge?</li>
+<li><strong>Supply Chain Attacks:</strong> How do APTs infiltrate through trusted third-party vendors?</li>
+<li><strong>Human Factor &amp; Social Engineering:</strong> Why is phishing and <strong>insider threat management</strong> crucial?</li>
+</ul>
+</li>
+<li>
+<p><strong>3. Insights from Researching APTs and MITRE ATT&amp;CK (100–125 words)</strong><br>
+Reflect on what you learned from analyzing <strong>APT groups and the MITRE ATT&amp;CK framework</strong>:</p>
+<ul>
+<li>How did studying <strong>real-world APT groups</strong> change your perspective on cybersecurity?</li>
+<li>What did you learn about <strong>Tactics, Techniques, and Procedures (TTPs)</strong>?</li>
+<li>How does <strong>MITRE ATT&amp;CK help organizations</strong> understand, detect, and mitigate APT attacks?</li>
+<li>Were there any <strong>surprising discoveries</strong> about how APTs operate or how organizations respond?</li>
+</ul>
+</li>
+</ul>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 20px; width: 100%;">
+</div>
+<h2 id="section-2-practical-assignments-50-points---testbed-setup-and-linux-basics"><strong>Section 2: Practical Assignments (50 Points) - Testbed Setup and Linux Basics</strong> </h2>
+<h3 id="objectives-1"><strong>Objectives:</strong> </h3>
+<ul>
+<li>Set up a <strong>cybersecurity testbed</strong> with three virtual machines for future assignments.</li>
+<li>Learn and apply <strong>basic Linux commands</strong> for system administration and network troubleshooting.</li>
+<li>Perform <strong>connectivity tests</strong> and basic <strong>network reconnaissance</strong> using built-in Linux tools.</li>
+</ul>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 10px; width: 100%;">
+</div>
+<h4 id="grading-rubric-for-section-2-50-points"><strong>Grading Rubric for Section 2 (50 Points)</strong> </h4>
+<table>
+<thead>
+<tr>
+<th><strong>Task #</strong></th>
+<th><strong>Task</strong></th>
+<th><strong>Criteria</strong></th>
+<th><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task 1</strong></td>
+<td><strong>Testbed Setup</strong></td>
+<td>Successfully set up three VMs (Attacker, Target, Defense) and verified proper configuration. Provided required screenshots of VM settings, including allocated CPU, RAM, and storage.</td>
+<td><strong>10</strong></td>
+</tr>
+<tr>
+<td><strong>Task 1</strong></td>
+<td><strong>VM Login Verification</strong></td>
+<td>Successfully logged into all three VMs and provided screenshots of each logged-in session.</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td><strong>Task 2.1</strong></td>
+<td><strong>Check System Information</strong></td>
+<td>Correctly ran system commands (<code>uname -a</code>, <code>uptime</code>, <code>whoami</code>, <code>df -h</code>). Provided screenshots and explanations of outputs.</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td><strong>Task 2.2</strong></td>
+<td><strong>View Network Configuration</strong></td>
+<td>Correctly ran network configuration commands (<code>ifconfig</code>/<code>ip a</code>, <code>ip route</code>). Submitted screenshots and explained MAC/IP addresses, subnet alignment, and troubleshooting if needed.</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td><strong>Task 2.3</strong></td>
+<td><strong>Test Connectivity Between VMs</strong></td>
+<td>Successfully ran <code>ping</code> tests between VMs and submitted screenshots of results. Explained connectivity status and documented troubleshooting steps if necessary.</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td><strong>Task 2.4</strong></td>
+<td><strong>Network Scanning with Nmap</strong></td>
+<td>Performed an Nmap scan on Metasploitable 2, correctly identified <strong>open ports</strong>, and provided a security analysis based on the attack surface concept. Submitted screenshots of results.</td>
+<td><strong>10</strong></td>
+</tr>
+<tr>
+<td><strong>Task 2.5</strong></td>
+<td><strong>Check Running Processes &amp; Active Connections</strong></td>
+<td>Ran <code>ps aux</code> and <code>netstat -tulnp</code>, submitted screenshots, and explained any suspicious or notable findings.</td>
+<td><strong>5</strong></td>
+</tr>
+</tbody>
+</table>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 20px; width: 100%;">
+</div>
+<h2 id="tasks-for-section-2">Tasks for Section 2 </h2>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 10px; width: 100%;">
+</div>
+<h3 id="task-1-cybersecurity-testbed-setup"><strong>Task 1: Cybersecurity Testbed Setup</strong> </h3>
+<ol>
+<li><strong>Follow the <a href="https://ucdenver.instructure.com/courses/563983/files/27072183?module_item_id=5768833">testbed setup guide</a>, provided on Canvas Module "Testbed Setup for Assignments".</strong> This testbed will be used in future assignments to simulate <strong>real-world attack and defense scenarios</strong> in a controlled environment.</li>
+<li>Take screenshots of your Virtual Machine settings (three screenshots), including allocated CPU, RAM, and storage. Ensure the screenshots display the allocated CPU, RAM, and storage settings in the VM manager.</li>
+<li>Log into each VM and take three screenshots, one for each logged-in session. Ensure that the desktop or terminal is visible in each screenshot to confirm successful installation and login.</li>
+</ol>
+<hr>
+<h3 id="task-2-linux-basics-and-network-connectivity"><strong>Task 2: Linux Basics and Network Connectivity</strong> </h3>
+<p>Power on all three VMs and log into each one. With all VMs running in the <strong>isolated host-only network</strong>, perform the following tasks on <strong>one of the Kali VMs</strong> and document your results:</p>
+<h4 id="step-1-check-system-information"><strong>Step 1. Check System Information</strong> </h4>
+<ul>
+<li>Open a terminal and run the following commands:
+<ul>
+<li><code>uname -a</code> → Display system information.</li>
+<li><code>uptime</code> → Show system uptime.</li>
+<li><code>whoami</code> → Display the current logged-in user.</li>
+<li><code>df -h</code> → Show available disk space.</li>
+</ul>
+</li>
+<li>Take a screenshot of the terminal output for each command.</li>
+<li>Provide a brief explanation of the results, including system details, uptime significance, user identity, and disk space usage.</li>
+</ul>
+<h4 id="step-2-view-network-configuration"><strong>Step 2. View Network Configuration</strong> </h4>
+<ul>
+<li>Run the following commands and record the output:
+<ul>
+<li><code>ifconfig</code> or <code>ip a</code> → Display network interface details, including <strong>MAC and IP addresses</strong>.</li>
+<li><code>ip route</code> → Show the system's routing table.</li>
+</ul>
+</li>
+<li>Take a <strong>screenshot</strong> of each command's output.</li>
+<li>Provide a <strong>short explanation</strong> of the <strong>network configuration</strong>, including:
+<ul>
+<li>The assigned <strong>IP and MAC addresses</strong> and their roles in network communication.</li>
+<li>Whether the IP address belongs to the <strong>expected subnet range</strong> assigned in the testbed setup (e.g., <code>192.168.x.1</code>, such as <code>192.168.10.1</code>).
+<ul>
+<li>If the IP is <strong>correct</strong>, explain how it was assigned and why it aligns with the expected testbed configuration.</li>
+<li>If the IP does <strong>not</strong> match the expected subnet, investigate and explain <strong>potential misconfigurations</strong> and <strong>troubleshooting steps</strong> taken to resolve the issue.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="step-3-test-connectivity-between-vms"><strong>Step 3. Test Connectivity Between VMs</strong> </h4>
+<ul>
+<li>Use <code>ping</code> to verify network communication:
+<ul>
+<li>From <strong>Attacker VM (Kali)</strong>, ping <strong>Metasploitable 2</strong>.</li>
+<li>From <strong>Metasploitable 2</strong>, ping <strong>Defense VM (Kali)</strong>.</li>
+</ul>
+</li>
+<li>Take screenshots of successful <strong>ping results</strong> to confirm network connectivity.</li>
+<li>If pings fail, document troubleshooting steps taken to resolve connectivity issues.</li>
+</ul>
+<h4 id="step-4-network-scanning-with-nmap"><strong>Step 4. Network Scanning with Nmap</strong> </h4>
+<ul>
+<li><strong>Identify the IPv4 address</strong> of the <strong>Metasploitable 2 VM</strong> using <code>ifconfig</code> or <code>ip a</code>.</li>
+<li>From the <strong>Attacker VM (Kali)</strong>, perform a <strong>port scan</strong> on <strong>Metasploitable 2</strong>:
+<ul>
+<li>Run <code>nmap -p 1-1024 &lt;Metasploitable2-IP&gt;</code> to <strong>scan for open ports in the well-known range (1-1024)</strong>.</li>
+</ul>
+</li>
+<li>Take a screenshot of the <strong>Nmap scan output</strong>.</li>
+<li>Highlight five <strong>open ports and their associated services</strong> in the scan results.</li>
+<li>Provide a brief analysis explaining potential security risks based on the <strong>attack surface</strong> concept, discussing how attackers might exploit the exposed ports.</li>
+</ul>
+<h4 id="step-5-check-running-processes--active-connections"><strong>Step 5. Check Running Processes &amp; Active Connections</strong> </h4>
+<ul>
+<li>On one of the Kali VMs, run the following commands:
+<ul>
+<li><code>ps aux</code> → List all running processes.</li>
+<li><code>netstat -tulnp</code> → Display active network connections and listening ports.</li>
+</ul>
+</li>
+<li>Take screenshots of the <strong>running processes and active network connections</strong>.</li>
+<li>Identify and explain any <strong>suspicious or notable processes or network connections</strong>, considering their potential security implications.</li>
+</ul>
+<h4 id="step-6-set-defense-vm-eth0-to-promiscuous-mode-virtualbox"><strong>Step 6. Set Defense VM <code>eth0</code> to Promiscuous Mode (VirtualBox)</strong> </h4>
+<ul>
+<li>
+<p>🔧 <strong>Set Promiscuous Mode in VirtualBox Interface</strong></p>
+<ol>
+<li>Shut down the <strong>Defense VM</strong>.</li>
+<li>Open <strong>VirtualBox Manager</strong>.</li>
+<li>Select the Defense VM → click <strong>Settings</strong> → <strong>Network</strong>.</li>
+<li>Under <strong>Adapter 1</strong>, expand <strong>Advanced</strong>.</li>
+<li>Set <strong>Promiscuous Mode</strong> to <strong>Allow VMs</strong>.</li>
+<li>Click <strong>OK</strong> to save changes.</li>
+</ol>
+</li>
+<li>
+<p>💻 <strong>Enable Promiscuous Mode in the Guest OS</strong></p>
+<ol>
+<li>
+<p>Start the Defense VM.</p>
+</li>
+<li>
+<p>Open a terminal and run:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">sudo</span> <span class="token function">ip</span> <span class="token function">link</span> <span class="token builtin class-name">set</span> eth0 promisc on
+</code></pre></li>
+<li>
+<p>(Optional) Verify:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">ip</span> <span class="token function">link</span> show eth0
+</code></pre><p>Look for <code>PROMISC</code> in the output.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Take screenshots of the <strong>output showing eth0 in PROMISC mode</strong>.</p>
+</li>
+</ul>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 20px; width: 100%;">
+</div>
+<h2 id="assignment-1-submission-guidelines"><strong>Assignment 1: Submission Guidelines</strong> </h2>
+<ol>
+<li>
+<p><strong>Report</strong></p>
+<ul>
+<li>Download the provided <a href="a1_report.md"><em>Assignment 1 report file</em></a>.</li>
+<li>Complete all required sections and document tasks clearly.</li>
+<li>Submit both the completed <strong><code>a1_report.md</code></strong> and the converted <strong><code>a1_report.pdf</code></strong>. The PDF will be graded; the MD file will be kept as reference.</li>
+</ul>
+</li>
+<li>
+<p><strong>Screenshots</strong></p>
+<ul>
+<li>
+<p>Include <strong>all required screenshots</strong> for tasks.</p>
+</li>
+<li>
+<p>Place screenshots in a subfolder named <strong><code>screenshots</code></strong>.</p>
+</li>
+<li>
+<p>Embed them in your report using Markdown syntax:</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code><span class="token url"><span class="token operator">!</span>[<span class="token content">Screenshot Description</span>](<span class="token url">./screenshots/filename.png</span>)</span>
+</code></pre></li>
+<li>
+<p>Ensure screenshots are <strong>clear, legible, and uncropped</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Convert Report to PDF</strong></p>
+<ul>
+<li>Convert your <code>.md</code> file to PDF, ensuring formatting, code blocks, and embedded images are preserved.</li>
+</ul>
+</li>
+<li>
+<p><strong>Supporting Files (Optional)</strong></p>
+<ul>
+<li>If applicable, include extra files (e.g., raw scan results, configs) in a subfolder named <strong><code>extras</code></strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Submission Format</strong></p>
+<ul>
+<li>
+<p>Package all files into a compressed <code>.zip</code> file with the following structure:</p>
+<pre data-role="codeBlock" data-info="plaintext" class="language-plaintext plaintext"><code>Assignment1_lastName.zip
+├── a1_report.md
+├── a1_report.pdf
+├── screenshots/
+│   ├── vm_settings.png
+│   ├── login_kali.png
+│   └── nmap_results.png
+└── extras/ (optional)
+    ├── nmap_scan.txt
+    └── network_config.txt
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><strong>Final Submission</strong></p>
+<ul>
+<li>Upload <strong><code>Assignment1_lastName.zip</code></strong> to the course portal by the stated deadline.</li>
+<li>Late submissions will follow the course’s late submission policy.</li>
+</ul>
+</li>
+</ol>
+<div style="text-align: center; margin: 10px 0;">
+    <hr style="border: 5px; height: 20px; width: 100%;">
+</div>
+<h3 id="helpful-resources"><strong>Helpful Resources</strong> </h3>
+<ul>
+<li><strong>MITRE ATT&amp;CK Framework</strong> – <a href="https://attack.mitre.org">https://attack.mitre.org</a></li>
+<li><strong>Nmap Scanning Guide</strong> – <a href="https://nmap.org/book/man.html">https://nmap.org/book/man.html</a></li>
+<li><strong>Linux Command Basics</strong> – <a href="https://linuxcommand.org/">https://linuxcommand.org/</a></li>
+<li><strong>Cybersecurity Incident Reports</strong> – <a href="https://www.cisa.gov/news-events/cybersecurity-advisories">CISA Alerts</a></li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
